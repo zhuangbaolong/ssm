@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+//AOPmp分页拦截器
 @Configuration
 public class MpConfig {
 
