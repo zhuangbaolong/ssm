@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -105,7 +106,7 @@ class Mybatisplus01QuickstartApplicationTests {
     void testSave() {
         User user = new User();
 //        user.setId(2L);
-        user.setName("tom");
+        user.setName("tom2");
         user.setPassword("123");
         user.setAge(12);
         user.setTel("12345678912");
@@ -113,8 +114,20 @@ class Mybatisplus01QuickstartApplicationTests {
     }
 
     @Test
+    void testBatch() {
+//        userDao.deleteById(1679770615974711297L);
+        //批量删除
+        ArrayList<Long> list = new ArrayList<>();
+        list.add(1L);
+        list.add(2L);
+        userDao.deleteBatchIds(list);
+        //可批量查询
+//        userDao.selectBatchIds();
+    }
+    @Test
     void testDelete() {
-        userDao.deleteById(1679770615974711297L);
+        userDao.deleteById(1L);
+        System.out.println(userDao.selectList(null));
     }
 
     @Test

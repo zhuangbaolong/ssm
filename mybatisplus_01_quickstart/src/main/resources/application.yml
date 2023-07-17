@@ -43,3 +43,7 @@ mybatis-plus:
     banner: false
     db-config:
       table-prefix: tbl_
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 0
+      logic-not-delete-value: 1
