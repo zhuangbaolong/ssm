@@ -1,17 +1,26 @@
 package com.example.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.math.BigInteger;
 
 @Data
+//@TableName("tbl_user") 对应数据库名
 public class User {
     private Long id;
     private String name;
+    //映射数据库字段名,select=false设置字段不参与查询
+    @TableField(value = "pwd",select = false)
     private String password;
     private Integer age;
     private String tel;
 
+    //数据库不存在的字段,类里使用的
+    @TableField(exist = false)
+    private Integer online;
 //    @Override
 //    public String toString() {
 //        return "User{" +
