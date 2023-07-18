@@ -23,6 +23,9 @@ public class User {
     //逻辑删除字段,默认为0
 //    @TableLogic(value = "0",delval = "1")
     private Integer deleted;
+
+    @Version
+    private Integer version;
 //    @Override
 //    public String toString() {
 //        return "User{" +

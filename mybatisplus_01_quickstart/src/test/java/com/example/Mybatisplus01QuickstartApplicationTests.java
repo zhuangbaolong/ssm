@@ -132,11 +132,20 @@ class Mybatisplus01QuickstartApplicationTests {
 
     @Test
     void testUpdate() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("Tom666");
-        user.setPassword("1111");
+//        User user = new User();
+//        user.setId(1L);
+//        user.setName("Tom666");
+//        user.setPassword("1111");
+//        userDao.updateById(user);
+
+        //模拟乐观锁：a用户
+        User user = userDao.selectById(3L); //拿到version=3
+        //模拟b用户
+        User user2 = userDao.selectById(3L); //拿到version=3
+        user.setName("aaa");
         userDao.updateById(user);
+        user2.setName("bbb");
+        userDao.updateById(user2);
     }
 
     //分页查询
