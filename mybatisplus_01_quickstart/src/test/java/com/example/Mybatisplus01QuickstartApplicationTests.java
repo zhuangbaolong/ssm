@@ -4,16 +4,16 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.Dao.OrderDao;
 import com.example.Dao.UserDao;
+import com.example.pojo.Order;
 import com.example.pojo.User;
-import com.example.pojo.query.UserQuery;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @SpringBootTest
 class Mybatisplus01QuickstartApplicationTests {
@@ -21,6 +21,9 @@ class Mybatisplus01QuickstartApplicationTests {
 
     @Autowired
     private UserDao userDao;
+
+//    @Autowired
+//    private OrderDao orderDao;
 
     @Test
     void testGetUserAll() {
@@ -160,5 +163,18 @@ class Mybatisplus01QuickstartApplicationTests {
         System.out.println("一共多少页:" + iPage.getPages());
         System.out.println("一共多少条:" + iPage.getTotal());
         System.out.println("数据:" + iPage.getRecords());
+    }
+
+    @Test
+    void testTime(){
+        Order order = new Order();
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(simpleDateFormat.format(date));
+        Calendar calendar = Calendar.getInstance();
+        System.out.println(simpleDateFormat.format(calendar.getTime()));
+        System.out.println(simpleDateFormat.format(System.currentTimeMillis()));
+//        order.setTime();
+//        orderDao.insert();
     }
 }
