@@ -2,8 +2,10 @@ package com.example.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigInteger;
+import java.util.Date;
 
 @Data
 //@TableName("tbl_user") 对应数据库名
@@ -24,6 +26,12 @@ public class User {
 //    @TableLogic(value = "0",delval = "1")
     private Integer deleted;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
     @Version
     private Integer version;
 //    @Override

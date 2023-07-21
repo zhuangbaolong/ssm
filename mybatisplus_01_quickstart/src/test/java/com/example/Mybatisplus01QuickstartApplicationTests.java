@@ -22,8 +22,8 @@ class Mybatisplus01QuickstartApplicationTests {
     @Autowired
     private UserDao userDao;
 
-//    @Autowired
-//    private OrderDao orderDao;
+    @Autowired
+    private OrderDao orderDao;
 
     @Test
     void testGetUserAll() {
@@ -170,11 +170,12 @@ class Mybatisplus01QuickstartApplicationTests {
         Order order = new Order();
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(simpleDateFormat.format(date));
-        Calendar calendar = Calendar.getInstance();
-        System.out.println(simpleDateFormat.format(calendar.getTime()));
-        System.out.println(simpleDateFormat.format(System.currentTimeMillis()));
-//        order.setTime();
-//        orderDao.insert();
+//        System.out.println(simpleDateFormat.format(date));
+//        Calendar calendar = Calendar.getInstance();
+//        System.out.println(simpleDateFormat.format(calendar.getTime()));
+//        System.out.println(simpleDateFormat.format(System.currentTimeMillis()));
+        System.out.println(System.currentTimeMillis());
+        order.setTime(date);
+        orderDao.insert(order);
     }
 }
