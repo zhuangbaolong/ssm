@@ -109,7 +109,7 @@ class Mybatisplus01QuickstartApplicationTests {
     void testSave() {
         User user = new User();
 //        user.setId(2L);
-        user.setName("tom2");
+        user.setName("Japanese");
         user.setPassword("123");
         user.setAge(12);
         user.setTel("12345678912");

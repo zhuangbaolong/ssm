@@ -1,19 +1,21 @@
 #多环境开发
 spring:
   profiles:
-    active: test2
+    active: test1
 ---
 spring:
   profiles: test1
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B9 # 设置系统时区为东京
     username: root
     password: bitware
   main:
     banner-mode: off
-
+  gson:
+    date-format: yyyy-MM:dd HH:mm:ss
+#    time-zone: GMT+9
 
 mybatis-plus:
   configuration:
@@ -29,7 +31,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT
     username: root
     password: '0214'
   main:
