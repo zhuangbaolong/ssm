@@ -1,8 +1,8 @@
-package com.example.springboot_cache.controller;
+package com.example.springboot_ehcache.controller;
 
-import com.example.springboot_cache.domain.SMSCode;
-import com.example.springboot_cache.service.SMSCodeService;
-import com.example.springboot_cache.utils.CodeUtils;
+
+import com.example.springboot_ehcache.domain.SMSCode;
+import com.example.springboot_ehcache.service.SMSCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

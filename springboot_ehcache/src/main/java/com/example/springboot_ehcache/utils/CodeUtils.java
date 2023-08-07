@@ -1,4 +1,4 @@
-package com.example.springboot_cache.utils;
+package com.example.springboot_ehcache.utils;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
