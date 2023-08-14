@@ -8,9 +8,16 @@ spring:
 #      username: root
 #      password: 0214
   cache:
-    type: ehcache
-    ehcache:
-      config: classpath:ehcache.xml
+    type: redis
+    redis:
+      use-key-prefix: true
+      key-prefix: study_
+      time-to-live: 50s
+      cache-null-values: true
+  redis:
+    host: localhost
+    port: 6379
+
 
 
 
