@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!.mvn/wrapper/maven-wrapper.jar
 *.war
 *.nar
 *.ear
@@ -24,3 +25,36 @@ hs_err_pid*
 replay_pid*
 .idea/
 mybatisplus_02/
+
+
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# temp file
+*.log
+*.cache
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+springmvc_01_quickstart/springboot_redis/.mvn/wrapper/maven-wrapper.jar
+springmvc_01_quickstart/springboot_redis/.mvn/wrapper/maven-wrapper.properties
+
+#所有文件下的mvnw 忽略
+**/mvnw
+
+#所有mvnw.cmd文件 忽略
+**/mvnw.cmd
+
+#所有目录下的.mvn结尾的文件或文件夹都忽略
+**/.mvn
+#编译后的忽略
+**/target/
+#.idea文件夹忽略
+**/.idea
