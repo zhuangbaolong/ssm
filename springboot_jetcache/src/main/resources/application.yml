@@ -1,1 +1,17 @@
 
+#远程redis
+jetcache:
+  remote:
+    default:
+      type: redis
+      host: localhost
+      port: 6379
+      poolConfig:
+        maxTotal: 50
+
+    sms:
+      type: redis
+      host: localhost
+      port: 6379
+      poolConfig:
+        maxTotal: 50
