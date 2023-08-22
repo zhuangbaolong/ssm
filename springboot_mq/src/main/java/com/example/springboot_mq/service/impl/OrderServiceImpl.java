@@ -1,0 +1,23 @@
+package com.example.springboot_mq.service.impl;
+
+import com.example.springboot_mq.service.MessageService;
+import com.example.springboot_mq.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderServiceImpl implements OrderService {
+
+    @Autowired
+    private MessageService me;
+
+    @Override
+    public void order(String id) {
+        //一系列操作，包含各种服务调用，处理各种业务
+        System.out.println("订单开始处理");
+        //短信消息处理
+        me.sendMessage(id);
+        System.out.println("订单处理结束");
+        System.out.println();
+    }
+}
