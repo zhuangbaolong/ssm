@@ -6,6 +6,8 @@ spring:
   jms:
     template:
       default-destination: itheima
+    #发布订阅模型
+#    pub-sub-domain: true
 #  jsm:
 #    template:
 #      default-des
