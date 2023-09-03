@@ -6,6 +6,7 @@ spring:
       client:
         url: http://localhost:8080
 management:
+  #对外是否开放
   endpoint:
     health:
       show-details: always
@@ -13,4 +14,13 @@ management:
     web:
       exposure:
         include: "*"
-
+  #开启info端点
+  info:
+    env:
+      enabled: true
+#info端点配置
+info:
+  appName: @project.artifactId@
+  vaersion: @project.version@
+  company: itheima
+  author: zhuangbl
