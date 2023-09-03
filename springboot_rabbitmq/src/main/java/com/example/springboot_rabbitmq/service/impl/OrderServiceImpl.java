@@ -19,6 +19,5 @@ public class OrderServiceImpl implements OrderService {
         //短信消息处理
         mes.sendMessage(id);
         System.out.println("订单处理结束!!");
-        System.out.println();
     }
 }

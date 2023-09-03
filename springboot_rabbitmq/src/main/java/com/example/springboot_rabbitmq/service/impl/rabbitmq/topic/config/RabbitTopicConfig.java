@@ -29,7 +29,7 @@ public class RabbitTopicConfig {
     //绑定
     @Bean
     public Binding bindingTopic(){
-        return BindingBuilder.bind(topicQueue()).to(topicExchange()).with("topic.order.id");
+        return BindingBuilder.bind(topicQueue()).to(topicExchange()).with("topic.*.id");
     }
     @Bean
     public Binding bindingTopic2(){

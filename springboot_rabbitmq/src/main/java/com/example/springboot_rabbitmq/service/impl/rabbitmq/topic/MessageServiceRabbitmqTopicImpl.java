@@ -14,7 +14,7 @@ public class MessageServiceRabbitmqTopicImpl implements MessageService {
     @Override
     public void sendMessage(String id) {
         System.out.println("待发送短信的订单已纳入处理队列(rabbitmq topic),id"+id);
-        amqpTemplate.convertAndSend("topicExchange","topic.order.id",id);
+        amqpTemplate.convertAndSend("topicExchange","topic.order.id：",id);
     }
 
     @Override
