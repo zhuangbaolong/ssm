@@ -11,7 +11,7 @@ import java.util.Map;
 public class InfoConfig implements InfoContributor {
     @Override
     public void contribute(Info.Builder builder) {
-        //动态数据处理
+        //动态数据处理配置显示
         builder.withDetail("runTime",System.currentTimeMillis());
         Map infoMap = new HashMap();
         infoMap.put("buildTime","2023-9-3");
