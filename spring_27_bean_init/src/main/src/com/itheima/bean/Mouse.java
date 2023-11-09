@@ -1,4 +1,4 @@
-package com.itheima.bean_init;
+package com.itheima.bean;
 
 import org.springframework.stereotype.Service;
 

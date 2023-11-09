@@ -1,6 +1,5 @@
-package com.itheima.bean_init.app;
+package com.itheima.app;
 
-import com.itheima.bean_init.Dog;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

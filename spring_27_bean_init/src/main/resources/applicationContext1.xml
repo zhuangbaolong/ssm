@@ -3,8 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    xml定义bean方式-->
-    <bean id="cat" class="com.itheima.bean_init.Cat"></bean>
-    <bean class="com.itheima.bean_init.Dog"></bean>
+    <bean id="cat" class="com.itheima.bean.Cat"></bean>
+    <bean class="com.itheima.bean.Dog"></bean>
 <!--声明第三方bean-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"></bean>
 </beans>

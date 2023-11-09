@@ -1,4 +1,4 @@
-package com.itheima.bean_init;
+package com.itheima.bean;
 
 public interface BookService {
     void check();
