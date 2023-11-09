@@ -1,6 +1,6 @@
 package com.itheima.impl;
 
-import com.itheima.bean.BookService;
+import com.itheima.bean.service.BookService;
 
 public class BookServiceImpl2 implements BookService {
     @Override
