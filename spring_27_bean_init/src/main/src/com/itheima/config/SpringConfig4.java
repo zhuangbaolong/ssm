@@ -1,5 +1,6 @@
 package com.itheima.config;
 
+import com.itheima.bean.Cat;
 import com.itheima.bean.Dog;
 import org.springframework.context.annotation.Import;
 
