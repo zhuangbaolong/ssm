@@ -9,7 +9,7 @@ public class MyImportSelector implements ImportSelector {
     public String[] selectImports(AnnotationMetadata annotationMetadata) {
         System.out.println("=================");
         System.out.println("提示:"+annotationMetadata.getClassName());
-        //检查是否配configuration
+        //检查是否配configuration，进行判定
         boolean flag = annotationMetadata.hasAnnotation("org.springframework.context.annotation.Configuration");
         System.out.println(flag);
         Map<String, Object> annotationAttributes = annotationMetadata.getAnnotationAttributes("org.springframework.context.annotation.ComponentScan");

@@ -1,4 +1,4 @@
-package com.itheima.impl;
+package com.itheima.bean.service.impl;
 
 import com.itheima.bean.service.BookService;
 
