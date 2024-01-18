@@ -32,6 +32,12 @@
             <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>cn.itcast</groupId>
+            <artifactId>ip_spring_boot_starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>
