@@ -16,6 +16,7 @@ public class IpCountService {
         //每次调用当前操作，记录当前访问的ip，然后累加访问次数。
         //1.获取当前操作的ip地址
         String ip = httpServletRequest.getRemoteAddr();
+        System.out.println("==============================="+ip);
         //2.根据ip地址从map取值，并递增。
         Integer count = ipCountMap.get(ip);
         if (count == null){
