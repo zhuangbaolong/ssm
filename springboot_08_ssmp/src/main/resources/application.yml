@@ -16,3 +16,12 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl:  org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+tools:
+  ip:
+    cycle: 10
+#    cycleReset: true
+#    烤肉串模式也行
+#    cycle-reset: true
+#    model: "detail"
